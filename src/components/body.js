@@ -19,7 +19,7 @@ const Body=()=>{
         // const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.406498&lng=78.47724389999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         // const json=await data.json();
         // console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
-        console.log(mockData)
+        // console.log(mockData)
         setlistOfRestaurant(mockData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
    
@@ -40,12 +40,12 @@ const Body=()=>{
         
         <div className="">
             <div className="m-4 p-4 ">
-                <input type="text" className="px-2 border border-solid border-black rounded" value={searchText} 
+                <input type="text" className="mx-10 md:mx-2 px-2 border border-solid border-black rounded" value={searchText} 
                     onChange={(e)=>{
                     setsearchText(e.target.value);
                 }}>
                 </input>
-                <button className="px-4 py-2 bg-green-200 rounded m-4 hover:opacity-40"
+                <button className="mx-auto px-4 py-2 bg-green-200 rounded md:m-4 hover:opacity-40"
                     onClick={()=>{
                     const filteredname=listOfRestaurant.filter((x)=>{
                     return x.info.name.includes(String(searchText));
@@ -53,7 +53,7 @@ const Body=()=>{
                     setlistOfRestaurant(filteredname);
                  }}>Search</button>
                 
-                <button className="bg-gray-300 rounded-lg hover:opacity-55 p-4 m-4" 
+                <button className="bg-gray-300 rounded-lg hover:opacity-55 p-4 m-4 mx-24 md:mx-10" 
                     onClick={()=>{
                     const filteredList=listOfRestaurant.filter((x)=> x?.info?.avgRating>4.5
                     )

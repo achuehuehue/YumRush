@@ -57,7 +57,7 @@ const Login = () => {
   return (
     <div className='flex justify-center  my-[7%]'>
         {isSignIn?
-            <form onSubmit={(e)=>e.preventDefault()} className='w-1/2 p-12 bg-black rounded bg-opacity-80' >
+            <form onSubmit={(e)=>e.preventDefault()} className='w-full md:w-1/2 p-12 bg-black rounded bg-opacity-80' >
                 <h1 className='text-white p-2 m-2 text-2xl'>Sign In</h1>
                 <input type="text" ref={email} placeholder="Email Address" className=' w-full p-2 m-2 bg-gray-700 text-white' ></input>
                 <input type="password" ref={password} placeholder="Password" className='w-full p-2 m-2 bg-gray-700 text-white' ></input>
@@ -71,7 +71,7 @@ const Login = () => {
                     </span> now!!</p>
             </form>
         :
-            <form onSubmit={(e)=>e.preventDefault()} className='w-1/2 p-12 bg-black rounded bg-opacity-80' >
+            <form onSubmit={(e)=>e.preventDefault()} className='w-full md:w-1/2 p-12 bg-black rounded bg-opacity-80' >
                 <h1 className='text-white p-2 m-2 text-2xl'>Sign Up</h1>
                 <input type="text" placeholder="Full Name" ref={name} className=' w-full p-2 m-2 bg-gray-700 text-white' ></input>
                 <input type="text" ref={email} placeholder="Email Address" className=' w-full p-2 m-2 bg-gray-700 text-white' ></input>

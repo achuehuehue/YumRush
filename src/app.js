@@ -47,10 +47,6 @@ const appRouter=createBrowserRouter([
             path:"/Login",
             element:<Login></Login>
         },
-        {
-            path:"/Contact",
-            element:<Contact></Contact>
-        }
     ],
     errorElement:<Error></Error>,
 },
