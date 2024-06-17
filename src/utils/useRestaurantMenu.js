@@ -1,19 +1,22 @@
 import { useEffect, useState } from "react";
+import menu from "../components/menuAPI.js";
 
 
 
 const useRestaurantMenu=(resId)=>{
-    const [resInfo,setResInfo]=useState(null);
+    // console.log(resId)
+    const [resInfo,setResInfo]=useState([]);
     useEffect(()=>{
         fetchInfo();
    },[]);
-   const fetchInfo= async()=>{
-       const data=await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=28.45970&lng=77.02820&restaurantId="+resId+"&catalog_qa=undefined&submitAction=ENTER");
-       const json=await data.json();
-       setResInfo(json.data);
+   const fetchInfo=()=>{ 
+    //    menu.filter((item)=>{console.log(item.id==resId)})
+       setResInfo(menu.filter((item)=>{ return item.id==resId}));
+       console.log(resInfo[0]);
+    //    console.log(menu);
    }
 
-   return resInfo;
+   return resInfo[0];
 }
 
 export default useRestaurantMenu;

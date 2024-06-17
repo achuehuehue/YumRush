@@ -19,6 +19,7 @@ const Body=()=>{
         // const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=17.406498&lng=78.47724389999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         // const json=await data.json();
         // console.log(json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+        console.log(mockData)
         setlistOfRestaurant(mockData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
     }
    
@@ -54,7 +55,7 @@ const Body=()=>{
                 
                 <button className="bg-gray-300 rounded-lg hover:opacity-55 p-4 m-4" 
                     onClick={()=>{
-                    const filteredList=listOfRestaurant.filter((x)=> x?.info?.avgRating>4.0
+                    const filteredList=listOfRestaurant.filter((x)=> x?.info?.avgRating>4.5
                     )
                     // console.log(filteredList)
                     setlistOfRestaurant(filteredList);
