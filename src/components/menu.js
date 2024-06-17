@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 import { json } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import useRestaurantMenu from "../utils/useRestaurantMenu";
-import Accordion from "./Accordion";
-import ShimmerMenu from "./ShimmerMenu";
+import Accordion from "./Accordion.js";
+import ShimmerMenu from "./shimmerMenu.js";
 
 
 
