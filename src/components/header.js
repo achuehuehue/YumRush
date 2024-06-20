@@ -53,7 +53,7 @@ const Header=()=>{
 
 
     return (
-        <div className="flex items-center justify-between bg- shadow-lg h-24">
+        <div className="flex items-center justify-between bg- shadow-lg h-24 fixed left-0 top-0 w-[100%] bg-white z-[1]">
             <div className="w-[160px] h-16 p-4 m-4 ml-[40px] bg-white flex justify-center items-center rounded-xl border-2 border-orange-500">
                 <h1 className="text-3xl font-bold text-orange-500" >YumRush</h1>
             </div>

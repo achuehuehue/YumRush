@@ -38,22 +38,23 @@ const Body=()=>{
 
     return (
         
-        <div className="">
-            <div className="m-4 p-4 ">
-                <input type="text" className="mx-10 md:mx-2 px-2 border border-solid border-black rounded" value={searchText} 
+        <div className="bg-gray-100 h-[100%] w-[100%]">
+            <div className="m-4 flex justify-center w-[400px] mx-auto relative">
+                <input type="text" className="px-2 mt-32 border border-solid border-gray-400 rounded-lg w-[100%] h-[40px]" value={searchText} 
                     onChange={(e)=>{
                     setsearchText(e.target.value);
                 }}>
                 </input>
-                <button className="mx-auto px-4 py-2 bg-green-200 rounded md:m-4 hover:opacity-40"
+                <button className="px-4 py-2 mt-32 bg-gray-400 text-white rounded-lg rounded-tl-none rounded-bl-none hover:bg-orange-400 absolute right-0"
                     onClick={()=>{
                     const filteredname=listOfRestaurant.filter((x)=>{
                     return x.info.name.includes(String(searchText));
                     })
                     setlistOfRestaurant(filteredname);
                  }}>Search</button>
-                
-                <button className="bg-gray-300 rounded-lg hover:opacity-55 p-4 m-4 mx-24 md:mx-10" 
+            </div>
+            <div className="w-[100%] flex justify-center mb-4">
+            <button className="bg-gray-300 rounded-lg hover:opacity-55 p-2" 
                     onClick={()=>{
                     const filteredList=listOfRestaurant.filter((x)=> x?.info?.avgRating>4.5
                     )
@@ -61,6 +62,7 @@ const Body=()=>{
                     setlistOfRestaurant(filteredList);
                 }}>Top Rated Restaurants</button>
             </div>
+            
             {listOfRestaurant?.length?
                 (<div className="flex flex-wrap justify-center items-center">
                 {listOfRestaurant?.map((restaurant)=>(
