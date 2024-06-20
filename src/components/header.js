@@ -53,25 +53,32 @@ const Header=()=>{
 
 
     return (
-        <div className="flex justify-between bg-green-300 lg:bg-pink-100 shadow-lg">
-            <div className="hidden lg:w-[15%] lg:lg:p-4 lg:m-4 lg:bg-gradient-to-t lg:from-red-300 lg:flex lg:justify-center lg:items-center lg:rounded-xl ">
-                <h1 className="text-3xl font-bold text-red-700" >YumRush</h1>
+        <div className="flex items-center justify-between bg- shadow-lg h-24">
+            <div className="w-[160px] h-16 p-4 m-4 ml-[40px] bg-white flex justify-center items-center rounded-xl border-2 border-orange-500">
+                <h1 className="text-3xl font-bold text-orange-500" >YumRush</h1>
             </div>
-       
-            <div className="flex items-center">
-                <ul className="flex p-4 md:m-4 ">
-                    <li className="xs:hidden px-4 cursor-pointer font-bold text-lg" >Online Status:{onlineStatus? <span className="text-green-700" >●</span> : <span className="text-red-700" >●</span> }</li>
-                    <li className="px-4 cursor-pointer font-bold text-lg" ><Link to="/">Home</Link></li>
-                    <li className="px-4 cursor-pointer font-bold text-lg" ><Link to="/About">About Us</Link></li>
-                    <li className="px-4 cursor-pointer font-bold text-lg" ><Link to="/Cart">Cart ({cartItems.length} items)</Link></li>
+            <div className="w-[50px] h-[100%] flex-shrink-0"></div>
+            <div className="lg:w-[750px] md:w-[600px] flex items-center justify-between lg:mr-[80px] md:mr-[40px] text-[18px] text-gray-700 cursor-pointer collapse md:visible">
+
+                    <span className=""><Link to="/">Home</Link></span>
+                    <span className=""><Link to="/About">About Us</Link></span>
+                    <span className="relative">
+                      <Link to="/Cart">
+                        Cart
+                      </Link>
+                      <div className="absolute bg-orange-500 w-[20px] h-[20px] rounded-full text-white flex items-center justify-center text-sm right-[-15px] top-[-8px]">
+                        {cartItems.length}
+                      </div>
+                    </span> 
+                    <span className="">{onlineStatus? <span className="text-green-700" >Online ●</span> : <span className="text-red-700" >Offline ●</span> }</span>
                     {User?
-                        <li className="px-4 cursor-pointer font-bold text-lg" >
-                        <button className="bg-gray-300 px-4 rounded-lg"><Link to="/Login"  onClick={handleSignOut}>Sign Out</Link></button></li>
+                        <span className="">
+                        <button className="px-4 py-2 bg-gray-300 rounded-lg transition-colors duration-[100ms] hover:bg-gray-200 text-[16px]"><Link to="/Login"  onClick={handleSignOut}>Sign Out</Link></button></span>
                     :
-                        <li className="px-4 cursor-pointer font-bold text-lg" >
-                        <button className="bg-gray-300 px-4 rounded-lg"><Link to="/Login">Sign In</Link></button></li>}
-                    <li className="hidden md:inline-block md:px-4 md:cursor-pointer md:font-bold md:text-lg">{userName}</li>
-                </ul>
+                        <span className="">
+                        <button className="px-4 py-2 bg-gray-300 rounded-lg transition-colors duration-[100ms] hover:bg-gray-200 text-[16px]"><Link to="/Login">Sign In</Link></button></span>}
+                    {/* <li className="hidden md:inline-block md:px-4 md:cursor-pointer">{userName}</li> */}
+                
             </div>
         </div>
     )
