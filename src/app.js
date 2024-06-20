@@ -11,6 +11,7 @@ import appStore from "./utils/appStore.js";
 import Cart from "./components/cart.js";
 import Login from "./components/login.js";
 import Contact from "./components/Contact.js";
+import Footer from "./components/footer.js";
 
 
 const AppLayout=()=>{
@@ -19,6 +20,7 @@ const AppLayout=()=>{
      <div className="">
         <Header></Header>
         <Outlet></Outlet>
+        <Footer></Footer>
     </div>
    </Provider>)
 };
