@@ -58,11 +58,11 @@ const Header=()=>{
                 <h1 className="text-3xl font-bold text-orange-500" >YumRush</h1>
             </div>
             <div className="w-[50px] h-[100%] flex-shrink-0"></div>
-            <div className="lg:w-[750px] md:w-[600px] flex items-center justify-between lg:mr-[80px] md:mr-[40px] text-[18px] text-gray-700 cursor-pointer collapse md:visible">
+            <div className="lg:w-[750px] md:w-[600px] flex items-center justify-between lg:mr-[80px] md:mr-[40px] text-[18px] text-gray-700 collapse md:visible">
 
-                    <span className=""><Link to="/">Home</Link></span>
-                    <span className=""><Link to="/About">About Us</Link></span>
-                    <span className="relative">
+                    <span className="cursor-pointer"><Link to="/">Home</Link></span>
+                    <span className="cursor-pointer"><Link to="/About">About Us</Link></span>
+                    <span className="relative cursor-pointer">
                       <Link to="/Cart">
                         Cart
                       </Link>
@@ -70,9 +70,9 @@ const Header=()=>{
                         {cartItems.length}
                       </div>
                     </span> 
-                    <span className="">{onlineStatus? <span className="text-green-700" >Online ●</span> : <span className="text-red-700" >Offline ●</span> }</span>
+                    <span className="cursor-default">{onlineStatus? <span className="text-green-700" >Online ●</span> : <span className="text-red-700" >Offline ●</span> }</span>
                     {User?
-                        <span className="">
+                        <span className="cursor-pointer">
                         <button className="px-4 py-2 bg-gray-300 rounded-lg transition-colors duration-[100ms] hover:bg-gray-200 text-[16px]"><Link to="/Login"  onClick={handleSignOut}>Sign Out</Link></button></span>
                     :
                         <span className="">

@@ -55,15 +55,15 @@ const Login = () => {
         setIsSignIn(!isSignIn);
     }
   return (
-    <div className='flex justify-center  my-[7%]'>
+    <div className="flex justify-center items-center w-[100%] h-screen bg-gray-200 m-0">
         {isSignIn?
-            <form onSubmit={(e)=>e.preventDefault()} className='w-full md:w-1/2 p-12 bg-black rounded bg-opacity-80' >
+            <form onSubmit={(e)=>e.preventDefault()} className='p-12 bg-black rounded-lg bg-opacity-80 w-[80%] max-w-[550px]' >
                 <h1 className='text-white p-2 m-2 text-2xl'>Sign In</h1>
                 <input type="text" ref={email} placeholder="Email Address" className=' w-full p-2 m-2 bg-gray-700 text-white' ></input>
                 <input type="password" ref={password} placeholder="Password" className='w-full p-2 m-2 bg-gray-700 text-white' ></input>
                 <p className='text-white p-2 m-2'>{errorMessage}</p>
                 <button className='bg-white rounded hover:opacity-40 p-2 m-2' onClick={handleSignIn}>Sign In</button>
-                <p className='text-white p-2 m-2'>New to YumRush? <span className='underline cursor-pointer' onClick={toggleSignInForm}>
+                <p className='text-white m-2'>New to YumRush? <span className='underline cursor-pointer' onClick={toggleSignInForm}>
                     {isSignIn?
                         "Sign Up"
                         :
@@ -71,14 +71,14 @@ const Login = () => {
                     </span> now!!</p>
             </form>
         :
-            <form onSubmit={(e)=>e.preventDefault()} className='w-full md:w-1/2 p-12 bg-black rounded bg-opacity-80' >
+            <form onSubmit={(e)=>e.preventDefault()} className='p-12 bg-black rounded-lg bg-opacity-80 w-[80%] max-w-[550px]' >
                 <h1 className='text-white p-2 m-2 text-2xl'>Sign Up</h1>
                 <input type="text" placeholder="Full Name" ref={name} className=' w-full p-2 m-2 bg-gray-700 text-white' ></input>
                 <input type="text" ref={email} placeholder="Email Address" className=' w-full p-2 m-2 bg-gray-700 text-white' ></input>
                 <input type="password" ref={password} placeholder="Password" className='w-full p-2 m-2 bg-gray-700 text-white' ></input>
                 <p className='text-white p-2 m-2'>{errorMessage}</p>
                 <button className='bg-white rounded hover:opacity-40 p-2 m-2' onClick={handleSignIn}>Sign Up</button>
-                <p className='text-white p-2 m-2'>New to YumRush? <span className='underline cursor-pointer' onClick={toggleSignInForm}>
+                <p className='text-white m-2'>New to YumRush? <span className='underline cursor-pointer' onClick={toggleSignInForm}>
                     {isSignIn?
                         "Sign Up"
                         :
