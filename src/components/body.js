@@ -39,7 +39,7 @@ const Body=()=>{
     return (
         
         <div className="bg-orange-100 h-[100%] w-[100%]">
-            <div className="m-4 flex justify-center w-[90%] mx-auto relative">
+            <div className="m-4 flex justify-center w-[90%] mx-auto relative max-w-[800px]">
                 <input type="text" className="px-2 mt-32 border border-solid border-gray-400 rounded-lg w-[100%] h-[40px]" value={searchText} 
                     onChange={(e)=>{
                     setsearchText(e.target.value);
