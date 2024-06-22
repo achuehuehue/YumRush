@@ -64,7 +64,7 @@ const Body=()=>{
             </div>
             
             {listOfRestaurant?.length?
-                (<div className="flex flex-wrap justify-center items-center">
+                (<div className="flex flex-wrap justify-center items-center mb-[100px] md:mb-0 lg:mb-0">
                 {listOfRestaurant?.map((restaurant)=>(
                 <Link key={restaurant.info.id}  to={"/restaurants/"+restaurant.info.id} >
                     <RestaurantCard resData={restaurant}></RestaurantCard>
