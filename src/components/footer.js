@@ -51,7 +51,7 @@ const Footer = () => {
     },[]);
 
     return (
-        <div className="md:collapse sm:visible fixed w-[100%] h-[100px] bg-white left-0 bottom-0 flex items-center justify-evenly">
+        <div className="md:collapse sm:visible fixed w-[100%] h-[100px] bg-white bottom-0 flex items-center justify-evenly">
             <span className=""><Link to="/">Home</Link></span>
                     <span className=""><Link to="/About">About Us</Link></span>
                     <span className="relative">

@@ -38,14 +38,14 @@ const Body=()=>{
 
     return (
         
-        <div className="bg-gray-100 h-[100%] w-[100%]">
-            <div className="m-4 flex justify-center w-[400px] mx-auto relative">
+        <div className="bg-orange-100 h-[100%] w-[100%]">
+            <div className="m-4 flex justify-center w-[90%] mx-auto relative">
                 <input type="text" className="px-2 mt-32 border border-solid border-gray-400 rounded-lg w-[100%] h-[40px]" value={searchText} 
                     onChange={(e)=>{
                     setsearchText(e.target.value);
                 }}>
                 </input>
-                <button className="px-4 py-2 mt-32 bg-gray-400 text-white rounded-lg rounded-tl-none rounded-bl-none hover:bg-orange-400 absolute right-0"
+                <button className="px-4 py-2 mt-32 transistion-colors duration-[300ms] bg-orange-400 text-white rounded-lg rounded-tl-none rounded-bl-none hover:opacity-85 absolute right-0"
                     onClick={()=>{
                     const filteredname=listOfRestaurant.filter((x)=>{
                     return x.info.name.includes(String(searchText));
@@ -54,7 +54,7 @@ const Body=()=>{
                  }}>Search</button>
             </div>
             <div className="w-[100%] flex justify-center mb-4">
-            <button className="bg-gray-300 rounded-lg hover:opacity-55 p-2" 
+            <button className="bg-green-300 transistion-colors duration-200 rounded-lg hover:bg-green-400 p-2" 
                     onClick={()=>{
                     const filteredList=listOfRestaurant.filter((x)=> x?.info?.avgRating>4.5
                     )
