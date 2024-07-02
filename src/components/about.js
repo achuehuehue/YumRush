@@ -47,9 +47,7 @@ const About=()=>{
                   <strong>Address:</strong> Sail City, Ranchi, Jharkhand - 834004
                 </div> 
             </div>
-            <div className="collapse md:visible flex items-center justify-center p-4 bg-black text-white w-[100%] h-[150px] fixed bottom-0">
-                <p className="">Made by Akansha</p>
-            </div>
+            
         </div>    
         )
 }
