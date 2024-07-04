@@ -12,16 +12,23 @@ const Cart = () => {
       dispatch(clearItems());
     }
 
+    const makePayment = () => {
+      console.log("Hello")
+    }
+
   return (
-    <div className="text-center m-4 p-4">
+    <div className="text-center my-[100px] p-4">
         <h1 className="text-2xl font-bold" >Cart</h1>
         <div className="w-1/2 m-auto">
-        <button className="rounded shadow-lg bg-black text-white m-4 p-4" onClick={handleClick}>Clear Cart</button>
+        <button className="rounded shadow-lg bg-black text-white m-4 px-3 py-2 ransition-colors duration-100 hover:bg-gray-300 hover:text-black" onClick={handleClick}>Clear Cart</button>
         {cartItems.length===0 && <h1>Cart is empty!!</h1>}
           <AccordionBody Data={cartItems} ></AccordionBody>
-          {cartItems.length!=0 && <p>Total : ₹ {total} </p>}
+          {cartItems.length!=0 && 
+          (<div>
+            <p className="mb-[10px]">Total : ₹ {total} </p> 
+            <button className="bg-black text-white px-4 py-2 rounded-md transition-colors duration-100 hover:bg-gray-300 hover:text-black" onClick={makePayment}>Pay Now</button>
+          </div>)}
         </div>
-
     </div>
   )
 }
